@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "418398991237",
+    "project_id": "cresco24-a6210",
+    "storage_bucket": "cresco24-a6210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418398991237:android:064f6820252c334febcaec",
+        "android_client_info": {
+          "package_name": "com.example.cresco24"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0R1FimTRl8ZOIbI6D13pBMWZ6I6u_QGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,5 @@
 // ignore_for_file: file_names
-
+import 'package:cresco24/Home/home.dart';
 import 'package:cresco24/Login/sign_up.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,7 +10,7 @@ import 'package:cresco24/Components/myButton.dart';
 import 'package:cresco24/Login/Forgot_Password_Page.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:page_transition/page_transition.dart';
-
+import '../Components/Navigators.dart';
 import '../Components/utils.dart';
 
 //tasked with login and sign up routing
@@ -152,21 +152,6 @@ class _LoginWidgetState extends State<LoginWidget> {
               )),
 
                   const SizedBox(height: 20),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(200, 40),
-                      backgroundColor: HexColor("#d9eff5"),
-                      shadowColor:  HexColor("#d9eff5"),
-                    ),
-                    onPressed: signInGuest,
-                      child: const Text(
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontFamily: "Sarabun"),
-                        'Log In as Guest!',
-                      )),
-
             ]),
           ),
         )),
@@ -191,6 +176,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           email: emailController.text.trim(),
           password: passwordController.text.trim(),
         );
+        navigation().navigateToPage(context, Home());
       } on FirebaseAuthException catch (e) {
         //exception handling
         Utils.showSnackBar(e.message);

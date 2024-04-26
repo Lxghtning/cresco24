@@ -36,7 +36,7 @@ class NavBar extends StatelessWidget {
               backgroundColor: Colors.white,
               child: ClipOval(
                 child: Text(
-                  name[0],
+                  "hello",
                   style: const TextStyle(
                     color: Colors.black,
                     fontSize: 40,
@@ -60,41 +60,41 @@ class NavBar extends StatelessWidget {
             endIndent: 0,
             thickness: 2,
           ),
-          ExpansionTile(
-            leading: const Icon(Icons.shop),
-            title: const Text('Services'),
-            children: [
-              ListTile(
-                title: const Text("College Counselling"),
-                onTap: () {
-
-                },
-              ),
-              ListTile(
-                title: const Text('Country Counselling'),
-                onTap: () {
-
-                },
-              ),
-              ListTile(
-                title: const Text('Career Counselling'),
-                onTap: () {
-                  // Handle category 3 tap
-
-                },
-              ),
-              ListTile(
-                title: const Text('College Specifiers'),
-                onTap: () {
-
-                },
-              ),
-              // Add more ListTile widgets for additional categories
-            ],
-          ),
+          // ExpansionTile(
+          //   leading: const Icon(Icons.shop),
+          //   title: const Text('Services'),
+          //   children: [
+          //     ListTile(
+          //       title: const Text("College Counselling"),
+          //       onTap: () {
+          //
+          //       },
+          //     ),
+          //     ListTile(
+          //       title: const Text('Country Counselling'),
+          //       onTap: () {
+          //
+          //       },
+          //     ),
+          //     ListTile(
+          //       title: const Text('Career Counselling'),
+          //       onTap: () {
+          //         // Handle category 3 tap
+          //
+          //       },
+          //     ),
+          //     ListTile(
+          //       title: const Text('College Specifiers'),
+          //       onTap: () {
+          //
+          //       },
+          //     ),
+          //     // Add more ListTile widgets for additional categories
+          //   ],
+          // ),
           ListTile(
             leading: const Icon(Icons.question_answer),
-            title: Text('Forum', style: listtiletextstyle,),
+            title: Text('Hints', style: listtiletextstyle,),
             onTap: () => {
 
             },

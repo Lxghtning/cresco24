@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:cresco24/Components/myButton.dart';
 import 'package:cresco24/Components/utils.dart';
-import 'package:cresco24/Login/sign_up.dart';
-import 'package:cresco24/Home/home.dart';
+import 'package:cresco24/Home/beforeHome.dart';
 
 
 //deals with statuis of email verification
@@ -66,7 +65,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
   @override
   //if user is verified, returns home, else stays on verification page
   Widget build(BuildContext context) => isEmailVerified || FirebaseAuth.instance.currentUser!.email.toString() == "guest@srimalcards.in"
-      ?  const Home()
+      ?  const BeforeHome()
       : Scaffold(
           backgroundColor: HexColor("#4169E1"),
           appBar: AppBar(

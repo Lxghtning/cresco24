@@ -61,7 +61,6 @@ class _LoginWidgetState extends State<LoginWidget> {
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               const SizedBox(height: 20),
-              Image.asset("assets/const.png"),
               const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -176,7 +175,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           email: emailController.text.trim(),
           password: passwordController.text.trim(),
         );
-        navigation().navigateToPage(context, Home());
+        navigation().navigateToPage(context, const Home());
       } on FirebaseAuthException catch (e) {
         //exception handling
         Utils.showSnackBar(e.message);

@@ -3,8 +3,7 @@ import 'package:cresco24/Components/Navigators.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-
-
+import 'package:cresco24/Home/home.dart';
 
 class NavBar extends StatelessWidget {
   NavBar({super.key});
@@ -32,12 +31,12 @@ class NavBar extends StatelessWidget {
           UserAccountsDrawerHeader(
             accountName: Text(name, style:  const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
             accountEmail: Text(email, style:  const TextStyle(color: Colors.black, fontWeight: FontWeight.normal),),
-            currentAccountPicture: CircleAvatar(
+            currentAccountPicture: const CircleAvatar(
               backgroundColor: Colors.white,
               child: ClipOval(
                 child: Text(
                   "hello",
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.black,
                     fontSize: 40,
                     fontFamily: "Futura",
@@ -53,7 +52,9 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home),
             title: Text('Home', style: listtiletextstyle,),
-            onTap: () => {}
+            onTap: (){
+              navigation().navigateToPage(context, Home());
+            }
           ),
           const Divider(
             indent: 0,
